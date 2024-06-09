@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Voiture{% endblock %}
+
+{% block body %}
+    <h1>Voiture</h1>
+
+    <table class="table">
+        <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ voiture.id }}</td>
+        </tr>
+        <tr>
+            <th>Tarif</th>
+            <td>{{ voiture.tarif }}</td>
+        </tr>
+        <tr>
+            <th>Couleur</th>
+            <td>{{ voiture.couleur }}</td>
+        </tr>
+        <tr>
+            <th>Statut</th>
+            <td>{{ voiture.statut }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+
+{% endblock %}

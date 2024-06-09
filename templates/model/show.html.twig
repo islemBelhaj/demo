@@ -1,0 +1,31 @@
+{% extends 'base_admin_back.html.twig' %}
+
+{% block title  %}Model{% endblock %}
+
+{% block body %}
+    <h1 style="text-align: center"  >Model</h1>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col" style="color: red">id</th>
+            <th scope="col" style="color: red">Model</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{ model.id }}</td>
+            <td>{{ model.model }}</td>
+
+        </tr>
+
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_model_index') }}" class="btn btn-primary">back to list</a>
+
+    <a href="{{ path('app_model_edit', {'id': model.id}) }}" class="btn btn-secondary">edit</a>
+
+    {{ include('model/_delete_form.html.twig')  }}
+{% endblock %}

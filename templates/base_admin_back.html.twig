@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- theme meta -->
+    <meta name="theme-name" content="quixlab" />
+
+    <title>Quixlab - Bootstrap Admin Dashboard Template by Themefisher.com</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/back/images/favicon.png">
+    <!-- Pignose Calender -->
+    <link href="/back/plugins/pg-calendar/css/pignose.calendar.min.css" rel="stylesheet">
+    <!-- Chartist -->
+    <link rel="stylesheet" href="/back/plugins/chartist/css/chartist.min.css">
+    <link rel="stylesheet" href="/back/plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
+    <!-- Custom Stylesheet -->
+    <link href="/back/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!--*******************
+    Preloader start
+********************-->
+<div id="preloader">
+    <div class="loader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+        </svg>
+    </div>
+</div>
+<!--*******************
+    Preloader end
+********************-->
+
+
+<!--**********************************
+    Main wrapper start
+***********************************-->
+<div id="main-wrapper">
+
+    <!--**********************************
+        Nav header start
+    ***********************************-->
+    <div class="nav-header">
+        <div class="brand-logo">
+            <a href="{{ path('admin_voiture_index') }}">
+                <b class="logo-abbr"><img src="/back/images/location.png" alt=""> </b>
+                <span class="logo-compact"><img src="/back/images/location.png" alt=""></span>
+                <span class="brand-title">
+                       <h4 style="border: red " >CAR LOCATION</h4>
+                    </span>
+            </a>
+        </div>
+    </div>
+    <!--**********************************
+        Nav header end
+    ***********************************-->
+
+    <!--**********************************
+        Header start
+    ***********************************-->
+    <div class="header">
+        <div class="header-content clearfix">
+            <div class="header-right">
+                <a href="{{ path('app_logout') }}"  class="btn btn-danger">Déconnexion</a>
+            </div>
+            <div class="nav-control">
+                <div class="hamburger">
+                    <span class="toggle-icon"><i class="icon-menu"></i></span>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+{#    <div class="nk-sidebar">#}
+{#        <div class="nk-nav-scroll">#}
+{#            <ul class="metismenu" id="menu">#}
+{#                <li>#}
+
+{#                <li><a href="./gestionVoiture.html" aria-expanded="false">Gestion Voiture</a></li>#}
+
+{#                </li>#}
+{#            </ul>#}
+{#        </div>#}
+{#    </div>#}
+
+    <div class="nk-sidebar">
+        <div class="nk-nav-scroll">
+            <ul class="metismenu" id="menu">
+                <li>
+
+                <li><a href="{{ path('admin_voiture_index') }}">Gestion Voiture</a></li>
+
+                </li>
+
+                <li><a href="{{ path('app_reservation') }}">Gestion Reservation</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content-body">
+
+{#        <div class="container-fluid mt-3">#}
+{#            <div class="row">#}
+{#                <div class="col-lg-3 col-sm-6">#}
+{#                    <div class="card gradient-1">#}
+{#                        <div class="card-body">#}
+{#                            <h3 class="card-title text-white">Products Sold</h3>#}
+{#                            <div class="d-inline-block">#}
+{#                                <h2 class="text-white">4565</h2>#}
+{#                                <p class="text-white mb-0">Jan - March 2019</p>#}
+{#                            </div>#}
+{#                            <span class="float-right display-5 opacity-5"><i class="fa fa-shopping-cart"></i></span>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-lg-3 col-sm-6">#}
+{#                    <div class="card gradient-2">#}
+{#                        <div class="card-body">#}
+{#                            <h3 class="card-title text-white">Net Profit</h3>#}
+{#                            <div class="d-inline-block">#}
+{#                                <h2 class="text-white">$ 8541</h2>#}
+{#                                <p class="text-white mb-0">Jan - March 2019</p>#}
+{#                            </div>#}
+{#                            <span class="float-right display-5 opacity-5"><i class="fa fa-money"></i></span>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-lg-3 col-sm-6">#}
+{#                    <div class="card gradient-3">#}
+{#                        <div class="card-body">#}
+{#                            <h3 class="card-title text-white">New Customers</h3>#}
+{#                            <div class="d-inline-block">#}
+{#                                <h2 class="text-white">4565</h2>#}
+{#                                <p class="text-white mb-0">Jan - March 2019</p>#}
+{#                            </div>#}
+{#                            <span class="float-right display-5 opacity-5"><i class="fa fa-users"></i></span>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-lg-3 col-sm-6">#}
+{#                    <div class="card gradient-4">#}
+{#                        <div class="card-body">#}
+{#                            <h3 class="card-title text-white">Customer Satisfaction</h3>#}
+{#                            <div class="d-inline-block">#}
+{#                                <h2 class="text-white">99%</h2>#}
+{#                                <p class="text-white mb-0">Jan - March 2019</p>#}
+{#                            </div>#}
+{#                            <span class="float-right display-5 opacity-5"><i class="fa fa-heart"></i></span>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+
+
+
+{#        </div>#}
+        {% block body %}
+        {% endblock %}
+        <!-- #/ container -->
+    </div>
+
+</div>
+
+<script src="/back/plugins/common/common.min.js"></script>
+<script src="/back/js/custom.min.js"></script>
+<script src="/back/js/settings.js"></script>
+<script src="/back/js/gleek.js"></script>
+<script src="/back/js/styleSwitcher.js"></script>
+
+<!-- Chartjs -->
+<script src="/back/plugins/chart.js/Chart.bundle.min.js"></script>
+<!-- Circle progress -->
+<script src="/back/plugins/circle-progress/circle-progress.min.js"></script>
+<!-- Datamap -->
+<script src="/back/plugins/d3v3/index.js"></script>
+<script src="/back/plugins/topojson/topojson.min.js"></script>
+<script src="/back/plugins/datamaps/datamaps.world.min.js"></script>
+<!-- Morrisjs -->
+<script src="/back/plugins/raphael/raphael.min.js"></script>
+<script src="/back/plugins/morris/morris.min.js"></script>
+<!-- Pignose Calender -->
+<script src="/back/plugins/moment/moment.min.js"></script>
+<script src="/back/plugins/pg-calendar/js/pignose.calendar.min.js"></script>
+<!-- ChartistJS -->
+<script src="/back/plugins/chartist/js/chartist.min.js"></script>
+<script src="/back/plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
+
+
+
+<script src="/back/js/dashboard/dashboard-1.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- theme meta -->
+    <meta name="theme-name" content="quixlab" />
+
+    <title>Quixlab - Bootstrap Admin Dashboard Template by Themefisher.com</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/back/images/voiture.jpg">
+    <!-- Pignose Calender -->
+    <link href="/back/plugins/pg-calendar/css/pignose.calendar.min.css" rel="stylesheet">
+    <!-- Chartist -->
+    <link rel="stylesheet" href="/back/plugins/chartist/css/chartist.min.css">
+    <link rel="stylesheet" href="/back/plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
+    <!-- Custom Stylesheet -->
+    <link href="/back/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!--*******************
+    Preloader start
+********************-->
+<div id="preloader">
+    <div class="loader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+        </svg>
+    </div>
+</div>
+<!--*******************
+    Preloader end
+********************-->
+
+
+<!--**********************************
+    Main wrapper start
+***********************************-->
+<div id="main-wrapper">
+
+    <!--**********************************
+        Nav header start
+    ***********************************-->
+    <div class="nav-header">
+        <div class="brand-logo">
+
+
+
+
+                       <h4 style="border: red ; text-align: center" >CAR LOCATION</h4>
+
+            </a>
+        </div>
+    </div>
+    <!--**********************************
+        Nav header end
+    ***********************************-->
+
+    <!--**********************************
+        Header start
+    ***********************************-->
+{#    <div class="header">#}
+{#        <div class="header-content clearfix">#}
+
+{#            <div class="nav-control">#}
+{#                <div class="hamburger">#}
+{#                    <span class="toggle-icon"><i class="icon-menu"></i></span>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="header-left">#}
+{#                <div class="input-group icons">#}
+{#                    <div class="input-group-prepend">#}
+{#                        <span class="input-group-text bg-transparent border-0 pr-2 pr-sm-3" id="basic-addon1"><i class="mdi mdi-magnify"></i></span>#}
+{#                    </div>#}
+
+{#                    <div >#}
+{#                        <input type="search" class="form-control" placeholder="Model" aria-label="Search Dashboard">#}
+{#                    </div>#}
+
+{#                    <div>#}
+{#                        <select  class="form-control" placeholder="Tarif" aria-label="Search Dashboard">#}
+{#                            <option>ok</option>#}
+{#                        </select>#}
+{#                    </div>#}
+{#                    <div>#}
+{#                        <select class="form-control" placeholder="couleur" aria-label="Search Dashboard">#}
+{#                            <option>ok</option>#}
+{#                        </select>#}
+
+{#                    </div>#}
+{#                    <div class="drop-down animated flipInX d-md-none">#}
+{#                        <form action="#">#}
+{#                            <input type="text" class="form-control" placeholder="Search">#}
+
+{#                        </form>#}
+{#                    </div>#}
+
+{#                </div>#}
+
+
+{#            </div>#}
+            <div class="header-right">
+                <a href="{{ path('app_logout') }}"  class="btn btn-danger">Déconnexion</a>
+            </div>
+        </div>
+    </div>
+    <!--**********************************
+        Header end ti-comment-alt
+    ***********************************-->
+
+    <!--**********************************
+        Sidebar start
+    ***********************************-->
+    <div class="nk-sidebar">
+
+        <div class="nk-nav-scroll">
+
+        </div>
+    </div>
+
+    <!--**********************************
+        Sidebar end
+    ***********************************-->
+
+    <!--**********************************
+        Content body start
+    ***********************************-->
+    <div class="content-body">
+        {% block body %}
+        {% endblock body %}
+
+
+
+
+
+
+
+{#            <div class="row">#}
+{#                <div class="col-lg-3 col-sm-6">#}
+{#                    <div class="card">#}
+{#                        <div class="card-body">#}
+{#                            <div class="text-center">#}
+{#                                <img src="/back/images/users/8.jpg" class="rounded-circle" alt="">#}
+{#                                <h5 class="mt-3 mb-1">Ana Liem</h5>#}
+{#                                <p class="m-0">Senior Manager</p>#}
+{#                                <!-- <a href="javascript:void()" class="btn btn-sm btn-warning">Send Message</a> -->#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-lg-3 col-sm-6">#}
+{#                    <div class="card">#}
+{#                        <div class="card-body">#}
+{#                            <div class="text-center">#}
+{#                                <img src="/back/images/users/5.jpg" class="rounded-circle" alt="">#}
+{#                                <h5 class="mt-3 mb-1">John Abraham</h5>#}
+{#                                <p class="m-0">Store Manager</p>#}
+{#                                <!-- <a href="javascript:void()" class="btn btn-sm btn-warning">Send Message</a> -->#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-lg-3 col-sm-6">#}
+{#                    <div class="card">#}
+{#                        <div class="card-body">#}
+{#                            <div class="text-center">#}
+{#                                <img src="/back/images/users/7.jpg" class="rounded-circle" alt="">#}
+{#                                <h5 class="mt-3 mb-1">John Doe</h5>#}
+{#                                <p class="m-0">Sales Man</p>#}
+{#                                <!-- <a href="javascript:void()" class="btn btn-sm btn-warning">Send Message</a> -->#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="col-lg-3 col-sm-6">#}
+{#                    <div class="card">#}
+{#                        <div class="card-body">#}
+{#                            <div class="text-center">#}
+{#                                <img src="/back/images/users/1.jpg" class="rounded-circle" alt="">#}
+{#                                <h5 class="mt-3 mb-1">Mehedi Titas</h5>#}
+{#                                <p class="m-0">Online Marketer</p>#}
+{#                                <!-- <a href="javascript:void()" class="btn btn-sm btn-warning">Send Message</a> -->#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+
+{#            </div>#}
+
+
+
+
+
+
+{#        </div>#}
+        <!-- #/ container -->
+    </div>
+    <!--**********************************
+        Content body end
+    ***********************************-->
+
+
+    <!--**********************************
+        Footer start
+    ***********************************-->
+    <div class="footer">
+        <div class="copyright">
+            <p>Copyright &copy; Designed & Developed by <a href="https://themeforest.net/user/quixlab">Quixlab</a> 2018</p>
+        </div>
+    </div>
+    <!--**********************************
+        Footer end
+    ***********************************-->
+</div>
+<!--**********************************
+    Main wrapper end
+***********************************-->
+
+<!--**********************************
+    Scripts
+***********************************-->
+<script src="/back/plugins/common/common.min.js"></script>
+<script src="/back/js/custom.min.js"></script>
+<script src="/back/js/settings.js"></script>
+<script src="/back/js/gleek.js"></script>
+<script src="/back/js/styleSwitcher.js"></script>
+
+<!-- Chartjs -->
+<script src="/back/plugins/chart.js/Chart.bundle.min.js"></script>
+<!-- Circle progress -->
+<script src="/back/plugins/circle-progress/circle-progress.min.js"></script>
+<!-- Datamap -->
+<script src="/back/plugins/d3v3/index.js"></script>
+<script src="/back/plugins/topojson/topojson.min.js"></script>
+<script src="/back/plugins/datamaps/datamaps.world.min.js"></script>
+<!-- Morrisjs -->
+<script src="/back/plugins/raphael/raphael.min.js"></script>
+<script src="/back/plugins/morris/morris.min.js"></script>
+<!-- Pignose Calender -->
+<script src="/back/plugins/moment/moment.min.js"></script>
+<script src="/back/plugins/pg-calendar/js/pignose.calendar.min.js"></script>
+<!-- ChartistJS -->
+<script src="/back/plugins/chartist/js/chartist.min.js"></script>
+<script src="/back/plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
+
+
+
+<script src="/back/js/dashboard/dashboard-1.js"></script>
+
+</body>
+
+</html>

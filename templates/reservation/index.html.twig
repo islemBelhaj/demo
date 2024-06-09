@@ -1,0 +1,51 @@
+{% extends 'base_admin_back.html.twig' %}
+
+{% block title %}Hello ReservationController!{% endblock %}
+
+{% block body %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h4>Table de Reservation</h4>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>date Début</th>
+                                <th>date fin</th>
+                                <th>voiture</th>
+                                <th>created By</th>
+                                <th>statut</th>
+                                <th>Actions</th>
+                            </tr>
+    <tr>
+    {% for reservation in reservations %}
+        <td>{{ reservation.dateDebut|date('Y-m-d ') }}</td>
+        <td>{{ reservation.dateFin|date('Y-m-d ') }}</td>
+        <td>{{ reservation.idVoiture.idModel.model }}</td>
+        <td>{{ reservation.idUtilisateur.nom }}</td>
+        <td>{% if reservation.statut == 1 %}
+                enAttente
+            {% endif %}
+            {% if reservation.statut == 0 %}
+                Réfusé
+            {% endif %}
+            {% if reservation.statut == 2%}
+                accepter
+            {% endif %}</td>
+        <td><a href="{{  path('app_reservation',{'idReservationAcc':reservation.id}) }}" class="btn btn-warning">Accepter</a>
+            <a href="{{  path('app_reservation',{'idReservationRef':reservation.id}) }}" class="btn btn-warning">Refuser</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

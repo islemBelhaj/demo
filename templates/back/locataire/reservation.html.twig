@@ -1,0 +1,30 @@
+{% extends 'base_admin_back.html.twig' %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form-validation">
+        <form method="post">
+            <label class="col-lg-4 col-form-label" for="val-username">date debut</label>
+            <input type="date" name="dateDebut" class="form-control" id="val-username" ><br>
+            <label class="col-lg-4 col-form-label" for="val-username">dateFin</label>
+            <input type="date" name="dateFin" class="form-control" id="val-username"><br>
+            <input type="submit" value="Reserver" class="btn btn-primary"><br>
+        </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</form>
+    <a href="{{ path('app_front_annonces') }}" class="btn btn-warning">back to list</a>
+{% endblock %}

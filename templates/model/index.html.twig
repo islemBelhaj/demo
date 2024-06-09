@@ -1,0 +1,35 @@
+{% extends 'base_admin_back.html.twig' %}
+
+{% block title %}Model index{% endblock %}
+
+{% block body %}
+    <h1 style="text-align: center"> Model</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Model</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for model in models %}
+            <tr>
+                <td>{{ model.id }}</td>
+                <td>{{ model.model }}</td>
+                <td>
+                    <a href="{{ path('app_model_show', {'id': model.id}) }}" class="btn btn-primary">show</a>
+                    <a href="{{ path('app_model_edit', {'id': model.id}) }}" class="btn btn-secondary">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_model_new') }}" class="btn btn-warning">Create new</a>
+{% endblock %}

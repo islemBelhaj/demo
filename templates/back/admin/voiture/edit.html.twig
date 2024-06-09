@@ -1,0 +1,43 @@
+{% extends 'base_admin_back.html.twig' %}
+
+{% block title %}Edit Voiture{% endblock %}
+
+{% block body %}
+    <h1>Edit Voiture</h1>
+
+    {{ form_start(form, {'attr': {'class': 'form-valide'}}) }}
+    <div class="form-group row">
+        <label class="col-lg-4 col-form-label" for="form_tarif">Tarif <span class="text-danger">*</span></label>
+        <div class="col-lg-6">
+            {{ form_widget(form.tarif, {'attr': {'class': 'form-control', 'id': 'form_tarif'}}) }}
+            {{ form_errors(form.tarif) }}
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-lg-4 col-form-label" for="form_couleur">Couleur <span class="text-danger">*</span></label>
+        <div class="col-lg-6">
+            {{ form_widget(form.couleur, {'attr': {'class': 'form-control', 'id': 'form_couleur'}}) }}
+            {{ form_errors(form.couleur) }}
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-lg-4 col-form-label" for="form_id_Model">Model <span class="text-danger">*</span></label>
+        <div class="col-lg-6">
+            {{ form_widget(form.id_Model, {'attr': {'class': 'form-control', 'id': 'form_id_Model'}}) }}
+            {{ form_errors(form.id_Model) }}
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-lg-8 ml-auto">
+            <button type="submit" class="btn btn-primary">{{ button_label|default('Update') }}</button>
+        </div>
+    </div>
+    {{ form_end(form) }}
+
+    <a href="{{ path('admin_voiture_index') }}" class="btn btn-warning">back to list</a>
+
+    {{ include('/admin/voiture/_delete_form.html.twig') }}
+{% endblock %}

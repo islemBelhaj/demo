@@ -1,0 +1,108 @@
+{% extends 'base_admin_back.html.twig' %}
+
+{% block title %}Voiture index{% endblock %}
+
+{% block body %}
+    <h1>Voitures</h1>
+
+{#    <table class="table">#}
+{#        <thead>#}
+{#        <tr>#}
+{#            <th>ID</th>#}
+{#            <th>Model</th>#}
+{#            <th>Tarif</th>#}
+{#            <th>Couleur</th>#}
+{#            <th>Statut</th>#}
+
+{#        </tr>#}
+{#        </thead>#}
+{#        <tbody>#}
+{#        {% for voiture in voitures %}#}
+{#            <tr>#}
+{#            <tr>#}
+{#                <td>{{ voiture.id }}</td>#}
+{#                <td>{{ voiture.idModel.model }}</td>#}
+{#                <td>{{ voiture.tarif }}</td>#}
+{#                <td>{{ voiture.couleur }}</td>#}
+{#                <td>{% if  voiture.statut == 1 %}#}
+{#                        NonReservé#}
+{#                    {% endif %}#}
+{#                    {% if  voiture.statut == 0 %}#}
+{#                        Reservé#}
+{#                    {% endif %}</td>#}
+{#                <td>#}
+{#                    <a href="{{ path('app_voiture_show', {'id': voiture.id}) }}">show</a>#}
+{#                    <a href="{{ path('app_voiture_edit', {'id': voiture.id}) }}">edit</a>#}
+{#                </td>#}
+{#            </tr>#}
+{#        {% else %}#}
+{#            <tr>#}
+{#                <td colspan="5">no records found</td>#}
+{#            </tr>#}
+{#        {% endfor %}#}
+{#        </tbody>#}
+{#    </table>#}
+
+
+
+
+
+
+{#    <a href="{{ path('app_voiture_new') }}">Create new</a>#}
+{#{% endblock %}#}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h4>Table de Voiture</h4>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Model</th>
+                                <th>Tarif</th>
+                                <th>Couleur</th>
+                                <th>Statut</th>
+                                <th>actions</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for voiture in voitures %}
+                            <tr>
+                               <td>{{ voiture.id }}</td>
+                                <td>{{ voiture.idModel.model }}</td>
+                                <td>{{ voiture.tarif }}</td>
+                                <td>{{ voiture.couleur }}</td>
+                                <td>{% if  voiture.statut == 1 %}
+                                        NonReservé
+                                    {% endif %}
+                                    {% if  voiture.statut == 0 %}
+                                        Reservé
+                                    {% endif %} </td>
+                                <td>
+                                    <a href="{{ path('app_voiture_show', {'id': voiture.id}) }}" class="btn btn-warning">show</a>
+                                    <a href="{{ path('app_voiture_edit', {'id': voiture.id}) }}" class="btn btn-warning">edit</a>
+                                </td>
+                            </tr>
+                            {% else %}
+                                <tr>
+                                    <td colspan="5">no records found</td>
+                                </tr>
+                            {% endfor %}
+
+                            </tbody>
+                        </table>
+                        <a href="{{ path('app_voiture_new') }}" class="btn btn-primary">Create new</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- #/ container -->
+    </div>
+
+</div>
+{% endblock %}
