@@ -45,4 +45,14 @@ class AcceuilController extends AbstractController
             return new JsonResponse(['res' => false]);
         }
     }
+    
+    #[Route('/verify/password', name: 'verify_paSSWOED')]
+    public function checkPassword(Request $request, UtilisateurRepository $repository): JsonResponse
+    {
+
+        $email = $request->getPayload()->get('email');
+        $utilisateur = $repository->findOneBy(array('email' => $email)) ;
+
+
+    }
 }
